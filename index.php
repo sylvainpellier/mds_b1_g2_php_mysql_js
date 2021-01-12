@@ -49,13 +49,15 @@ function calcul($type,$nombreA,$nombre)
     //à faire
 }
 //à ne pas toucher
-
 echo "Résultat = ".addition(10,4)."<br />";
 echo "Résultat = ".addition(4,4)."<br />";
 echo "Résultat = ".soustraction(13,4)."<br />";
-echo "Résultat = ".soustraction(13,4)."<br />";
+echo "Résultat = ".soustraction(10,4)."<br />";
 echo "Résultat = ".calcul("addition",13,4)."<br />";
-echo "Résultat = ".calcul("addition",13,4)."<br />";
+echo "Résultat = ".calcul("soustraction",4,4)."<br />";
+echo "Résultat = ".calcul("division",4,4)."<br />";
+//gérer ce cas pour ne pas avoir d'erreur
+echo "Résultat = ".calcul("division",4,0)."<br />";
 
 
 
