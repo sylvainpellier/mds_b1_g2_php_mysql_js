@@ -48,7 +48,7 @@ echo"</ul>";
 echo"<ul>";
 foreach($matieres as $matiere)
 {
-
+    $affichageU = $matiere === "mysql";
     echo "<li>";
     if($affichageU) echo"<u>";
     echo $matiere;
@@ -63,7 +63,7 @@ echo"</ul>";
 //exercice 3 : afficher la liste des matieres plus des informations
 //<p>Il y a trois matières disponibles : </p><ul><li>php</li></li><u>mysql</u> ....</ul>
 
-echo"<p>Il y a {count($matieres)} matières disponibles : </p>";
+echo"<p>Il y a ".count($matieres)." matières disponibles : </p>";
 echo"<ul>";
 foreach($matieres as $matiere)
 {
@@ -79,12 +79,12 @@ switch( count($matieres) )
 {
     case 0 : echo"<p>Il n'y a aucune matière</p>"; break;
     case 0 : echo"<p>Il y a une matière</p>"; break;
-    default : echo"<p>Il y a {count($matieres)} matières disponibles : </p>";
+    default : echo"<p>Il y a ".count($matieres)." matières disponibles : </p>";
 }
 
 
 //équivalent
-echo"<p>Il y a {count($matieres)} matière".  (count($matieres > 1) ? "s" : "") ."  disponible".  (count($matieres > 1) ? "s" : "") ." : </p>";
+echo"<p>Il y a ".count($matieres)." matière".  (count($matieres) > 1 ? "s" : "") ."  disponible".  (count($matieres)> 1 ? "s" : "") ." : </p>";
 echo"<ul>";
 foreach($matieres as $matiere)
 {
