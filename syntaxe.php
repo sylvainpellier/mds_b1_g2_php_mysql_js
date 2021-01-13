@@ -224,18 +224,21 @@ $complexe = (($nombreB + $nombreA) / 2 * 3 ) / $nombreB;
 //concatenation
 //dans une chaîne de caractère avec des doubles quote on peut inclure une variable simple
 echo "Le total est $totalAB";
+echo "Le total est {$totalAB}"; //équivalent possible uniquement avec les doubles quotes
 
 //la concaténation peut aussi se faire avec un point et ou des simples quotes
 echo 'La moyenne est '.$moyenne;
 
 //on peut aussi utiliser l'antislash pour échapper un caractère
-echo 'Le total d\'aujourd\'hui est ' . $totalAB;
+echo 'Le total d\'aujourd\'hui est ' . $totalAB; //l'antislash est oblitatoire pour spécifier au php que la chaîne de caractère ne s'arrête pas au simple quote
+echo "Le total d'aujourd'hui est " . $totalAB; //équivalent à la ligne du dessus
 
 //incrémentation
 
 $total = 10;
 $total++; //on augmente de 1, donc $total vaut 11
 $total += 1; //on augmente de 1, donc $total vaut 12 équivalent de $total = $total + 1;
+$total = $total + 1; //équivalente au deux précédentes
 $total += 10; //on augmente de 10, donc $total vaut 22 équivalent de $total = $total + 10;
 $total--; //on diminue de 1, donc $total vaut 21
 $total -= 1; //on diminue de 1, donc $total vaut 20
