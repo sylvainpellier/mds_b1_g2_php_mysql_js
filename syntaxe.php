@@ -88,6 +88,7 @@ echo $tableau[0]; //affiche banane
 echo $tableau[1]; //affiche tomate
 
 //sécurité : avant d'accéder on vérifie si la donnée existe
+//isset renvoyer un boolean
 if( isset(  $tableau[0] )) {  echo $tableau[0]; }
 
 //on ajoute un élément dans un tableau, j'ajoute "fraise" dans la première place disponible du tableau $tableau
@@ -168,10 +169,10 @@ echo $total = nomDeLaFonctionAvecReturn(1,2); //affiche 3
 //Le if est obligatoire
 //Il peut y avoir 0 ou plusieurs else if
 //Il peut y avoir 0 ou 1 else (et il doit être en dernier
-if( $variable === true)
+if( $variable === true) //équivalent if($variable){}
 {
 
-} else if( $variable2 === false)
+} else if( $variable2 === false) //équivalent if(!$variable2){}
 {
 
 } else
