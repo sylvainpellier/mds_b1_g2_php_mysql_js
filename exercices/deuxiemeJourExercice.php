@@ -27,14 +27,22 @@ $chambres[] = $chambre3;
 ///exercices 1 :
 /// afficher : <p>Il y a 3 chambres dans la base de données :</p>
 ///
+///
 /// exercice 2 :
 /// afficher : <p>Il y a 3 chambres dans la base de données :</p>
 /// <ul><li>La suite (taille : 100m2)</li><li>la lodge (taille .....</li> ...</ul>
+///
+///
+/// exercice 2 bis
+///  afficher : /// <ul><li>La suite (taille : 100m2) avec comme services : <ul><li>wifi</li><li>bluetooth</li>...</ul>
+/// </li><li>la lodge (taille .....</li> ...</ul>
+///
 ///
 /// exercice 3 :
 ///  afficher : <p>Il y a 3 chambres dans la base de données :</p>
 ///  <p>Liste des chambres avec baignoire </p>
 ///  <ul><li>la lodge (taille .....</li> ...</ul>
+///
 ///
 /// exercice 4 :
 /// afficher : <p>Il y a une  chambre dans la base de données avec une baignoire :</p>
