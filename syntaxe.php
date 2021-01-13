@@ -85,7 +85,7 @@ $tableau = ["banane","tomate","licorne"];
 
 //on accède aux éléments d'un tableau
 echo $tableau[0]; //affiche banane
-echo $tableau[1]; //affiche banane
+echo $tableau[1]; //affiche tomate
 
 //sécurité : avant d'accéder on vérifie si la donnée existe
 if( isset(  $tableau[0] )) {  echo $tableau[0]; }
