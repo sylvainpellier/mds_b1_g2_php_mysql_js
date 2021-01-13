@@ -37,16 +37,47 @@ $message = ( $message > 10 ) ? "test" : "20" ;
 
 function addition($nombreA,$nombre)
 {
-    //à faire
+    return $nombreA + $nombre;
 }
 function soustraction($nombreA,$nombre)
 {
-    //à faire
+   return $nombreA - $nombre;
+}
+
+function division($nombreA,$nombre)
+{
+    if($nombre === 0)
+    {
+        return "erreur";
+    } else
+    {
+        return $nombreA / $nombre;
+    }
+
+}
+
+function calculAlt($type,$nombreA,$nombre)
+{
+    if($type === "addition")
+    {
+        return $nombreA + $nombre;
+    } else if($type === "soustraction")
+    {
+        return $nombreA - $nombre;
+    } else if($type === "division")
+    {
+        return $nombreA / $nombre;
+    }
 }
 
 function calcul($type,$nombreA,$nombre)
 {
-    //à faire
+    switch($type)
+    {
+        case "addition" : return addition($nombreA,$nombre); break;
+        case "soustraction" : return soustraction($nombreA,$nombre); break;
+        case "division" : return division($nombreA,$nombre); break;
+    }
 }
 //à ne pas toucher
 echo "Résultat = ".addition(10,4)."<br />";

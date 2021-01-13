@@ -196,7 +196,6 @@ if( $bool1 || $bool2 ) { } //$bool1 ou $bool2 doivent tous les deux être vrai p
 
 // Les variables ///////////////////////////////////////
 
-
 //    Le nom des variables doit commencer par le signe dollars ($)
 //    Le nom des variables doit être composé uniquement de caractères alpha-numériques (A-z, 0-9, et _ )
 //    Le nom des variables ne doit pas contenir d’accents (utiliser un nommage en anglais ?)
