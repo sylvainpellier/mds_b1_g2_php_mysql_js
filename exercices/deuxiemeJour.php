@@ -3,12 +3,12 @@
 $matieres = ["php","mysql","css"];
 
 //exercice 1 : afficher la liste des matieres
-//<ul><li>php</li></li>mysql ....</ul>
+//<ul><li>php</li><li>mysql ....</ul>
 
 //code  :
 
 //exercice 2 : afficher la liste des matieres
-//<ul><li>php</li></li><u>mysql</u> ....</ul>
+//<ul><li>php</li><li><u>mysql</u> ....</ul>
 
 //code :
 
