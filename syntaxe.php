@@ -87,6 +87,13 @@ $tableau = ["banane","tomate","licorne"];
 echo $tableau[0]; //affiche banane
 echo $tableau[1]; //affiche tomate
 
+$tableauAssociatif = [];
+$tableauAssociatif["nom"] = "toto";
+$tableauAssociatif["age"] = 10;
+
+echo $tableauAssociatif["nom"]." a ".$tableauAssociatif["age"]." ans";
+
+
 //sécurité : avant d'accéder on vérifie si la donnée existe
 //isset renvoyer un boolean
 if( isset(  $tableau[0] )) {  echo $tableau[0]; }
