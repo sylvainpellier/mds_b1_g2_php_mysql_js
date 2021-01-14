@@ -78,7 +78,7 @@ echo"</ul>";
 switch( count($matieres) )
 {
     case 0 : echo"<p>Il n'y a aucune matière</p>"; break;
-    case 0 : echo"<p>Il y a une matière</p>"; break;
+    case 1 : echo"<p>Il y a une matière</p>"; break;
     default : echo"<p>Il y a ".count($matieres)." matières disponibles : </p>";
 }
 
