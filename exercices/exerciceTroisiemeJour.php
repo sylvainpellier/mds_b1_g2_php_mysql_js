@@ -18,13 +18,22 @@
 <h2>Solution : </h2>
 
 <div style="border:1px solid red; width: 200px; height: 200px;">
+
+
     <?php
 
     //votre code ici ///////////////////// début
 
+    if( isset( $_GET["valeur"]) === true )
+    {
+            echo $_GET["valeur"];
+            //echo "tartufle";
+    }
 
-
-
+    if( isset( $_GET["mot"]) === true && $_GET["mot"] === "algebre" )
+    {
+        echo "algebre et tartufle";
+    }
 
 
 
