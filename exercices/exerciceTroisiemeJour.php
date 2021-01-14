@@ -8,7 +8,7 @@
 
 <p><a href="exerciceTroisiemeJour.php?calcul=moyenne&nombreA=3&nombreB=8">en cliquant sur ce lien la page exercice3.php doit afficher dans le cadre de solution la moyenne de 3 et 8</a></p>
 
-<p><a href="exerciceTroisiemeJour.php?calcul=moyenne&nombreB=3&nombreC=3">en cliquant sur ce lien la page exercice3.php doit afficher dans le cadre de solution la moyenne de 3 et 8</a></p>
+<p><a href="exerciceTroisiemeJour.php?calcul=moyenne&nombreB=3&nombreC=5">en cliquant sur ce lien la page exercice3.php doit afficher dans le cadre de solution la moyenne de 3 et 5</a></p>
 
 <p><a href="exerciceTroisiemeJour.php">en cliquant sur ce lien la page exercice3.php doit afficher dans le cadre de solution le mot "rien"</a></p>
 
