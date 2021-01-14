@@ -23,14 +23,16 @@ echo "<hr /> ";
 
 ?>
 
-<form action="exercices/exerciceTroisiemeJourBis.php" method="post">
-   Valeur <input type="text" name="valeur" /><br />
-    Calcul <input type="text" name="calcul" /><br />
-    nombreA <input type="text" name="nombreA" /><br />
-    nombreB<input type="text" name="nombreB" /><br />
-    nombreC<input type="text" name="nombreC" /><br />
-
-    <input type="submit" />
+<form action="index.php" method="post">
+    <input type="text" name="nombreA" />
+    <input type="text" name="nombreB" />
+    <select name="calcul" >
+        <option>addition</option>
+        <option>soustraction</option>
+        <option>division</option>
+        <option>multiplication</option>
+    </select>
+    <input type="submit" value="calculer" />
 </form>
 
 
