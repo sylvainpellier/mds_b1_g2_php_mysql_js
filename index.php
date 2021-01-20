@@ -1,10 +1,27 @@
-<a href="index.php">accueil</a><br />
-<a href="index.php?type=contact">contact</a><br />
-<a href="index.php?type=produits&autreparametres=true">produits</a><br />
+<html>
+<head><?php include "parts/head.css"; ?></head>
+<body>
 
 <?php
-session_start();
 
-$_SESSION["nom"] = "valeur";
+include "data/chambres.php";
 
-var_dump($_SESSION);
+include "parts/menu.php";
+
+if(!isset($_GET["section"]))
+{
+    include "pages/accueil.php";
+} else if( file_exists("pages/".$_GET["section"].".php") )
+{
+    include "pages/".$_GET["section"].".php";
+} else
+{
+    include "pages/404.php";
+}
+
+
+
+?>
+
+</body>
+</html>
