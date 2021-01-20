@@ -1,8 +1,10 @@
 <html>
-<head><?php include "parts/head.css"; ?></head>
+<head><?php include "parts/head.php"; ?></head>
 <body>
 
 <?php
+
+//
 
 include "data/chambres.php";
 
