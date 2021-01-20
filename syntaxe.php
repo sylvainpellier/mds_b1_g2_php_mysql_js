@@ -1,5 +1,29 @@
 <?php
 
+// SESSION /////////////////////////////////////////////////////////////////
+
+//pour pouvoir avoir accès au tableau de session il faut au préalable démarrer la session dans le fichier php
+session_start();
+
+//ensuite on a accès à un tableau $_SESSION qui contient toutes les données de la session PHP
+
+//ajout de données :
+$_SESSION["nom"] = "valeur";
+
+//accès aux données :
+echo $_SESSION["nom"];
+
+//pour détruire toutes les données de la session on utilise
+session_destroy();
+
+// COOKIES /////////////////////////////////////////////////////////////////
+
+//en tout on a accès au tableau des cookies : $_COOKIE
+//ajout de données, on donne un nom et une valeur et un temps dans le future (ici dans une heure)
+setcookie("nom","valeur",time() + 3600);
+
+//accès aux données :
+echo $_COOKIE["nom"];
 
 //Le passage d'information entre les pages /////////////////////////////////////////////////
 
@@ -44,29 +68,39 @@ echo $_POST["prenom"]; //affichera ce qui a été saisi dans le formulaire dans 
 //L es tableaux multidimensionnelles  //////////////////////////////////////////////
 
 //définition d'un tableau
-$eleves = ["tom","etienne"];
+$eleves1 = ["tom","etienne"];
+$eleves2 = ["toto","titi"];
 
 //définition d'un tableau
 $matieres = [];
 
 //définition d'un tableau
 $php = [];
-$php[] = "mysql";
-$php[] = $eleves;
-//on ajoute le tableau php dans le tableau matieres
+
+//ajoute "mysql" dans le tableau $php
+$php[] = "php";
+$php[] = $eleves1;
+//on ajoute le tableau php dans le tableau matieres, l'élément 0 se sera $php
 $matieres[] = $php;
 
-//définition d'un tableau
-$sql = ["php",$eleves];
-//on ajoute le tableau sql dans le tableau matieres
+//définition d'un tableau, un élément 0 qui va être "sql", et un élement 1 qui va être la variable $eleves2 qui est un tableau
+$sql = ["sql",$eleves2];
+//on ajoute le tableau $sql dans le tableau $matieres, dans le tableau $matieres l'élément 1 sera $sql
 $matieres[] = $sql;
 
-//on parcourt le tableau matieres, à chaque itération on récupère dans la variable matiere un élement du tableau
+//on parcourt le tableau matieres ($matieres doit être un tableau)
+//je choissis de créer une variable $matiere (je choisis le nom)
+//variable $matiere est utilisable uniquement dans le foreach
+//à chaque itération on récupère dans la variable $matiere un élement du tableau
+//on passera dans le foreach autant de fois qu'il y a d'élement dans le $matieres
 foreach($matieres as $matiere)
 {
     echo"<p>La matière est ";
     //on affiche la première colonne du tableau matiere, qui est lui-même un élément du tableau matieres
     echo $matiere[0];
+
+    echo"</p>";
+
     echo"<p>La liste des prénom est : </p>";
 
     //on parcourt la première colonne du tableau matiere, qui est lui même un tableau
@@ -97,8 +131,10 @@ echo $tableauAssociatif["nom"]." a ".$tableauAssociatif["age"]." ans";
 
 
 //sécurité : avant d'accéder on vérifie si la donnée existe
-//isset renvoyer un boolean
-if( isset(  $tableau[0] )) {  echo $tableau[0]; }
+//isset est une fonction qui renvoit un boolean (true ou false)
+if( isset(  $tableau[0] )  === true ) {  echo $tableau[0]; } //il y a un élement 0 dans le tableau
+if( isset(  $tableau[0] )  === false ) {  echo $tableau[0]; } //il n'y a pas d'élement 0 dans le tableau
+if( isset(  $_GET["recherche"] )  === true ) {  echo $tableau["recherche"]; } //il n'y a pas d'élement "recherche" dans le tableau
 
 //on ajoute un élément dans un tableau, j'ajoute "fraise" dans la première place disponible du tableau $tableau
 $tableau[] = "fraise";
