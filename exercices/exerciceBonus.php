@@ -2,14 +2,26 @@
 
 ///CODE A ECRIRE /////////////////////////
 
+$voitures = [];
 
+$voitureA = [];
+$voitureA["modele"] = "206";
+$voitureA["marque"] = "peugeo";
+$voitureA["annee"] = "2006";
+$voitureA["options"] = ["clim","bluetooth"];
 
+$caracterisque1 = [];
+$caracterisque1["tarif"] = 2000;
+$caracterisque1["libelle"] = "toit ouvrant";
 
+$voitureA["caracteristiques"] = [];
 
+$caracterisque2 = [];
+$caracterisque2["tarif"] = 2300;
+$caracterisque2["libelle"] = "jante alu";
 
-
-
-
+$voitureA["caracteristiques"][] = $caracterisque1;
+$voitureA["caracteristiques"][] = $caracterisque2;
 
 
 
