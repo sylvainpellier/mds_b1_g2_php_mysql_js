@@ -4,8 +4,6 @@
 
 <?php
 
-//
-
 include "data/chambres.php";
 
 include "parts/menu.php";
